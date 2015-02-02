@@ -42,29 +42,28 @@ begin
   // Implement this method to handle any initialization after your window controller's
   // window has been loaded from its nib file.
   
-  _realm := RLMRealm.inMemoryRealmWithIdentifier('John');
 
 end;
 
 method MainWindowController.doStuffWithRealm(sender: id);
 begin
 
-
+  //_realm := RLMRealm.inMemoryRealmWithIdentifier('John');
   //~/Application Support/{bundle ID}/default.realm on OS X.
   
-  //NSLog('%@',RLMRealm.defaultRealmPath);
+  NSLog('%@',RLMRealm.defaultRealmPath);
 
-  //var realm := RLMRealm.defaultRealm;
+  var realm := RLMRealm.defaultRealm;
   
-  //realm.beginWriteTransaction;
+  realm.beginWriteTransaction;
   
-  //var employee := new Employee;
-  //employee.Firstname := 'John';
-  //employee.Lastname := 'Smith';
+  var employee := new Employee;
+  employee.Firstname := 'John';
+  employee.Lastname := 'Smith';
   
-  //realm.addObject(employee);
+  realm.addObject(employee);
   
-  //realm.commitWriteTransaction;
+  realm.commitWriteTransaction;
 end;
 
 end.
