@@ -10,8 +10,7 @@ type
 
   Employee = public class(RLMObject)
   public
-    property Firstname:String;
-    property Lastname:String;
+    property Name:NSString;
   end;
 
 implementation

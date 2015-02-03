@@ -13,12 +13,14 @@ type
   MainWindowController = public class(NSWindowController)
   private
     _realm:RLMRealm;
+    _realmFilename:String;
   protected
   public
     method init: instancetype; override;
     method windowDidLoad; override;
     
     [IBAction] method doStuffWithRealm(sender:id);
+    [IBAction] method doRealmSearch(sender:id);
   end;
 
 implementation
@@ -30,6 +32,7 @@ begin
   begin
 
     // Custom initialization
+    self._realmFilename := '/Users/JohnMoshakis/Documents/some.realm';
 
   end;
   result := self;
@@ -45,6 +48,23 @@ begin
 
 end;
 
+method MainWindowController.doRealmSearch(sender: id);
+begin
+  var realm := RLMRealm.realmWithPath(_realmFilename);
+  
+  var allEmployees := Employee.allObjectsInRealm(realm);
+  if(assigned(allEmployees))then
+  begin
+    NSLog('Found employees');
+    
+    for x:Integer := 0 to allEmployees.Count do
+    begin
+      var employee := allEmployees.objectAtIndex(x) as Employee;
+      NSLog(employee.Name);
+    end;
+  end;
+end;
+
 method MainWindowController.doStuffWithRealm(sender: id);
 begin
 
@@ -53,13 +73,13 @@ begin
   
   NSLog('%@',RLMRealm.defaultRealmPath);
 
-  var realm := RLMRealm.defaultRealm;
+  //var realm := RLMRealm.defaultRealm;
+  var realm := RLMRealm.realmWithPath(_realmFilename);
   
   realm.beginWriteTransaction;
   
   var employee := new Employee;
-  employee.Firstname := 'John';
-  employee.Lastname := 'Smith';
+  employee.Name := 'John Smith';
   
   realm.addObject(employee);
   
