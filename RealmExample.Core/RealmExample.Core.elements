@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0" DefaultTargets="Build">
+    <PropertyGroup Label="Globals">
+        <ProjectGuid>190DA4F6-7DF7-4958-8874-907A67662DA2</ProjectGuid>
+    </PropertyGroup>
+    <PropertyGroup>
+        <RootNamespace>RealmExample.Core</RootNamespace>
+    </PropertyGroup>
+    <Import Project="RealmExample.Core.projitems" Label="Shared"/>
+    <Import Project="$(MSBuildExtensionsPath)/RemObjects Software/Oxygene/RemObjects.Elements.SharedProject.targets"/>
+    <PropertyGroup>
+        <PreBuildEvent/>
+    </PropertyGroup>
+</Project>

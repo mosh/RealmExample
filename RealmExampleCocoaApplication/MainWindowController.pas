@@ -3,7 +3,7 @@
 interface
 
 uses
-  RealmExampleCocoaApplication.Models,
+  RealmExample.Core.Models,
   Realm.*,
   AppKit,
   Foundation;
@@ -57,10 +57,10 @@ begin
   begin
     NSLog('Found employees');
     
-    for x:Integer := 0 to allEmployees.Count do
+    for x:Integer := 0 to allEmployees.count-1 do
     begin
       var employee := allEmployees.objectAtIndex(x) as Employee;
-      NSLog(employee.Name);
+      NSLog('%@',employee.Name);
     end;
   end;
 end;

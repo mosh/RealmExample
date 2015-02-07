@@ -1,7 +1,11 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # RemObjects Fire
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "RealmExample.Core", "RealmExample.Core\RealmExample.Core.elements", "{190DA4F6-7DF7-4958-8874-907A67662DA2}"
+EndProject
 Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "RealmExampleCocoaApplication", "RealmExampleCocoaApplication\RealmExampleCocoaApplication.elements", "{030383C0-4020-4AEC-9E15-8B714C8A87A1}"
+EndProject
+Project("{656346D9-4656-40DA-A068-22D5425D4639}") = "RealmiOSApplication", "RealmiOSApplication\RealmiOSApplication.elements", "{0C3AF399-EB13-46D0-8ACB-0650F6804623}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +17,10 @@ Global
 		{030383C0-4020-4AEC-9E15-8B714C8A87A1}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
 		{030383C0-4020-4AEC-9E15-8B714C8A87A1}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
 		{030383C0-4020-4AEC-9E15-8B714C8A87A1}.Release|AnyCPU.Build.0 = Release|AnyCPU
+		{0C3AF399-EB13-46D0-8ACB-0650F6804623}.Debug|AnyCPU.ActiveCfg = Debug|AnyCPU
+		{0C3AF399-EB13-46D0-8ACB-0650F6804623}.Debug|AnyCPU.Build.0 = Debug|AnyCPU
+		{0C3AF399-EB13-46D0-8ACB-0650F6804623}.Release|AnyCPU.ActiveCfg = Release|AnyCPU
+		{0C3AF399-EB13-46D0-8ACB-0650F6804623}.Release|AnyCPU.Build.0 = Release|AnyCPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+        <HasSharedItems>true</HasSharedItems>
+        <SharedGUID>190DA4F6-7DF7-4958-8874-907A67662DA2</SharedGUID>
+    </PropertyGroup>
+    <PropertyGroup Label="Configuration">
+        <Import_RootNamespace>RealmExample.Core</Import_RootNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Include="$(MSBuildThisFileDirectory)Models\Employee.pas"/>
+    </ItemGroup>
+</Project>
